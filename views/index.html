@@ -1,0 +1,16 @@
+<style>
+	.window{
+		height: 500px;
+		overflow: scroll;
+	}
+</style>
+
+<a href="/#!/about" role="button" class="btn btn-primary">About</a> <button class="btn btn-danger"ng-click="move(-1)">&larr;</button> {{num}} <button class="btn btn-success" ng-click="move(1)">&rarr;</button>
+
+<h1>Pokemon</h1>
+
+<div class="window">
+<div class="well" ng-repeat="pokemon in data | limitTo:num track by $index ">
+	<h2><a ng-href="/#!/pokemon/{{ pokemonIndex(pokemon) }}">{{ pokemon.name }}</a></h2>	
+</div>
+</div>

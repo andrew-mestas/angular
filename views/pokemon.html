@@ -1,0 +1,19 @@
+	<a href="javascript:history.back()" role="button" class="btn btn-primary">Pokemon</a>
+	<a href="/#!/info/{{descriptionId}}" role="button" class="btn btn-info">Info</a><br>	
+	<img ng-src="http://pokeapi.co/media/img/{{data}}.png"><br>
+	<h4>Attack: {{attack}}
+	Defense: {{defense}}
+	Hp:{{hp}}</h4><hr>
+
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Abilities</th>
+		</tr>
+	</thead>
+	<tbody ng-repeat="data in abilities">
+		<tr>
+			<td>{{data.name}}</td>
+		</tr>
+	</tbody>
+</table>
